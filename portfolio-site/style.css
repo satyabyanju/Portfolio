@@ -1,0 +1,348 @@
+/* General Styles */
+/* General Styles */
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+  background: linear-gradient(135deg, rgba(240, 245, 255, 0.8), rgb(131, 144, 186), rgba(195, 203, 216, 0.8)); /* Example gradient */
+
+}
+html{
+  scroll-behavior: smooth;
+}
+
+header {
+  width: 100%;
+  height: 40px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  padding: 40px 0px 0 0 ;
+}
+
+/* Navbar Styles */
+.navbar {
+  position: fixed;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100vw;
+  height: 40px;
+  margin: 0;
+  padding: 40px;
+  background-color: rgb(131, 144, 186); 
+}
+
+/* Logo */
+.logo {
+  font-family: trirong;
+  font-size: 30px;
+  display:block; 
+  height: 30px;
+  border-radius: 10px;
+  padding-left: 50px;
+  align-items: center;
+  
+}
+
+/* Navigation Links */
+.nav-links {
+  display: flex;
+  list-style: none;
+  padding: 20px;
+  gap: 20px;
+}
+
+.nav-item {
+  
+  text-decoration: none;
+  padding: 10px 30px;
+  border: 1px solid black;
+  border-radius: 20px;
+  color: black;
+  font-weight: bold;
+  transition: all 0.3s ease;
+}
+
+.nav-item:hover {
+  background-color: #f3f3f3;
+}
+
+.nav-item.active {
+  background-color: black;
+  color: white;
+  border: none;
+}
+
+/* Profile Picture */
+.profile-pic {
+  max-width: 150px;
+}
+#intro{
+  
+  padding: 20% 10px; /* Adjust padding as needed */
+    width: 70%;
+    height: 50vh; /* Set height to full viewport height */
+    display: flex; /* Use flexbox layout */
+    justify-content: center; /* Center items horizontally */
+    align-items: center; /* Center items vertically */
+    text-align: center; /* Center text */
+
+}
+
+.intro-container {
+  display:flex; /* Use flexbox layout */
+  flex-direction: column; /* Space between text and profile picture */
+  align-items: center;
+  padding: 50px;
+  flex-wrap: wrap;
+}
+
+.intro-text {
+  text-align: center;
+  font-size: 30px;
+  flex: 1; /* Allow text to take up available space */
+  max-width: 60%; /* Optional: limit the width of the text */
+}
+
+.profile-pic img{
+ width: 100%;
+ height: auto;
+ border-radius: 50%;
+}
+
+
+.section {
+  
+  padding: 50px 20px;
+  text-align: center;
+  animation: fadeIn 1.5s ease-in-out;
+}
+.project-card{
+  background-color: white;
+}
+#about{
+  
+}
+
+.project-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 20px;
+  animation: slideIn 1s ease-out;
+}
+
+.project-card {
+  border: 1px solid #ddd;
+  padding: 10px;
+  border-radius: 8px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.project-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+}
+
+.project-link {
+  text-decoration: none;
+  color: #333;
+}
+
+.social-links{
+  display: flex;
+  justify-content: space-around;
+  padding: 0 40%;
+  margin: 5px;
+}
+
+form input, form textarea, form button {
+  width: 100%;
+  padding: 10px;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+}
+
+footer {
+  background-color: #333;
+  color: white;
+  text-align: center;
+  padding: 10px 0;
+}
+
+footer a {
+  color: white;
+  margin: 0 10px;
+  font-size: 1.5rem;
+  text-decoration: none;
+}
+
+/* Animations */
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+
+@keyframes slideIn {
+  from { transform: translateY(50px); opacity: 0; }
+  to { transform: translateY(0); opacity: 1; }
+}
+
+
+
+
+
+/* Media Queries */
+@media (max-width: 768px) {
+  body{
+    padding: 0px;
+    width: 100%;
+  }
+  header {
+    background-color: rgb(131, 144, 186);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  }
+  .logo{
+    font-family: trirong,'Times New Roman', Times, serif;
+    font-size: 40px;
+    height: 16px;
+    padding: 0px;
+  }
+  .navbar {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    width: 100vw;
+    height: 50px;
+    
+  }
+  .nav-links {
+    padding:0x;
+    gap: 5px;
+  }
+  
+  .nav-item {
+    font-size: 8px;
+    text-decoration: none;
+    padding: 5px 16px;
+    border: 1px solid black;
+    border-radius: 20px;
+    color: black;
+    font-weight: bold;
+    transition: all 0.3s ease;
+  }
+  
+  .nav-item:hover {
+    background-color: #f3f3f3;
+  }
+  
+  .nav-item.active {
+    background-color: black;
+    color: white;
+    border: none;
+  }
+  
+  /* Profile Picture */
+  .profile-pic {
+    max-width: 100px;
+  }
+  #intro{
+    
+    max-width: 100%;
+
+    height: 100%;
+    text-align: center;
+  
+  }
+  
+  .intro-container {
+    display: flex; /* Use flexbox layout */
+    flex-direction: column; /* Stack items vertically */
+    justify-content: space-between; /* Space between text and profile picture */
+    align-items: center;
+    padding: 20px 0 0 0; /* Optional: add some padding */
+    flex-wrap: wrap;
+  }
+  
+  .intro-text {
+    font-size: 24px;
+    flex: 1; /* Allow text to take up available space */
+    max-width: 80%; /* Optional: limit the width of the text */
+  }
+  
+  .profile-pic img{
+   width: 100%;
+   height: auto;
+   border-radius: 50%;
+  }
+  
+  
+  .section {
+    padding: 50px 20px;
+    text-align: center;
+    animation: fadeIn 1.5s ease-in-out;
+  }
+  #about{
+    background-color: rgb(168, 168, 168);
+  }
+  
+  .project-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 20px;
+    animation: slideIn 1s ease-out;
+  }
+  
+  .project-card {
+    border: 1px solid #ddd;
+    padding: 10px;
+    border-radius: 8px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s, box-shadow 0.3s;
+  }
+  
+  .project-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+  }
+  
+  .project-link {
+    text-decoration: none;
+    color: #333;
+  }
+  
+  .social-links{
+    display: flex;
+    justify-content: space-around;
+    padding: 0 40%;
+    margin: 5px;
+  }
+  
+  form input, form textarea, form button {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+  }
+  
+  footer {
+    background-color: #333;
+    color: white;
+    text-align: center;
+    padding: 10px 0;
+  }
+  
+  footer a {
+    color: white;
+    margin: 0 10px;
+    font-size: 1.5rem;
+    text-decoration: none;
+  }
+
+}
